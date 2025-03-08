@@ -1,5 +1,11 @@
 from machine import Pin, SPI
 
+#if display doesnt work, check wiring. Does not work without LED and RST lines
+#from ili9488 import ili9488
+#d = ili9488()
+#d.set_window(0,0,320,480)
+#d.fill(b'\x00\xff\x00')
+
 class ili9488():
 	def __init__(self, cs=10, dc=14, width=480, height=320):
 		self.hspi = SPI(1, 40000000)
